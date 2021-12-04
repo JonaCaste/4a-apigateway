@@ -21,8 +21,9 @@ const clienteTypeDefs = gql`
     }
 
     type Query{
+        ClienteById(id: Int!): Cliente
+        # por el momento no se utiliza
         Clientes: [Clientes]
-        ClienteByUsername(id: Int!): Cliente
     }
 
     type Mutation{

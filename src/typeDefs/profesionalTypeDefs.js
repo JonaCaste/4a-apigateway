@@ -19,8 +19,9 @@ const profesionalTypeDefs = gql`
     }
 
     type Query{
+        ProfesionalById(id: Int!): Profesional
+        # por el momento no se utiliza
         Profesionales: [Profesionales]
-        ProfesionalByUsername(id: Int!): Profesional
     }
 
     type Mutation{

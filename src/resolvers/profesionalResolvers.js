@@ -3,7 +3,7 @@ const profesionalResolvers = {
     /* Microservicio Django */
         Query:{
             profesionalByUsername: async ( _, {id}, {dataSources}) => {
-                return await dataSources.profesionalAPI.profesionalByUsernameRequest(id);
+                return await dataSources.profesionalAPI.profesionalByIdRequest(id);
             }
         },
 

@@ -2,8 +2,8 @@ const clienteResolvers = {
 
     /* Microservicio Django */
         Query:{
-            clienteByUsername: async ( _, {id}, {dataSources}) => {
-                return await dataSources.profesionalAPI.clienteByUsernameRequest(id);
+            clienteById: async ( _, {id}, {dataSources}) => {
+                return await dataSources.profesionalAPI.clienteByIdRequest(id);
             }
         },
 

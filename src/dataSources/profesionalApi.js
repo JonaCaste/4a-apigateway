@@ -13,7 +13,7 @@ class ProfesionalApi extends RESTDataSource{
     /*   Microservico Django   */
 
         /* Profesional */
-            async ProfesionalByUsernameRequest(id){
+            async ProfesionalByIdRequest(id){
                 return await this.get(`/profesional/persona-profesional/${id}/`);
             }
 
