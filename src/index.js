@@ -4,7 +4,7 @@ const typeDefs = require('./typeDefs');
 const resolvers = require('./resolvers');
 const ClienteAPI = require('./dataSources/clienteApi');
 const ProfesionalAPI = require('./dataSources/profesionalApi');
-consr CitaAPI = require("./dataSources/citaApi");
+const CitaAPI = require("./dataSources/citaApi");
 // const authentication = require("./utils/authentication");
 
 const server = new ApolloServer({
