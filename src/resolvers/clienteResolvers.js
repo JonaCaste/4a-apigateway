@@ -7,7 +7,7 @@ const clienteResolvers = {
             }
         },
 
-        Mutations:{
+        Mutation:{
             createCliente: async ( _, {clienteData}, {dataSources}) => {
                 return await dataSources.profesionalAPI.CreateCliente(clienteData);
             }

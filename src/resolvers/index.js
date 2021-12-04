@@ -6,6 +6,6 @@ const citaResolvers = require("./citaResolvers");
 const lodash = require("lodash");
 
 //unimos los resolvers
-const resolvers = lodash.merge(profesionalResolvers, clienteResolvers, cita);
+const resolvers = lodash.merge(profesionalResolvers, clienteResolvers, citaResolvers);
 
 module.exports = resolvers;

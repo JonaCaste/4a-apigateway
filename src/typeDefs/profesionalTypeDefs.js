@@ -19,13 +19,13 @@ const profesionalTypeDefs = gql`
     }
 
     type Query{
-        ProfesionalById(id: Int!): Profesional
+        profesionalById(id: Int!): Profesional
         # por el momento no se utiliza
-        Profesionales: [Profesionales]
+        Profesionales: [Profesional]
     }
 
     type Mutation{
-        CreateProfesional(data: ProfesionalInput!): Profesional
+        createProfesional(data: ProfesionalInput!): Profesional
     }
 
 `;

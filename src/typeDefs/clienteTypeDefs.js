@@ -21,13 +21,13 @@ const clienteTypeDefs = gql`
     }
 
     type Query{
-        ClienteById(id: Int!): Cliente
+        clienteById(id: Int!): Cliente
         # por el momento no se utiliza
-        Clientes: [Clientes]
+        Clientes: [Cliente]
     }
 
     type Mutation{
-        CreateCliente(data: ClienteInput!): Cliente
+        createCliente(data: ClienteInput!): Cliente
     }
 
 `;

@@ -2,12 +2,12 @@ const profesionalResolvers = {
 
     /* Microservicio Django */
         Query:{
-            profesionalByUsername: async ( _, {id}, {dataSources}) => {
+            profesionalById: async ( _, {id}, {dataSources}) => {
                 return await dataSources.profesionalAPI.profesionalByIdRequest(id);
             }
         },
 
-        Mutations:{
+        Mutation:{
             createProfesional: async ( _, {profesionalData}, {dataSources}) => {
                 return await dataSources.profesionalAPI.CreateProfesional(profesionalData);
             }

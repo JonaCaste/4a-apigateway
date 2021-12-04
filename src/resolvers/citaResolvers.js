@@ -7,7 +7,7 @@ const citaResolvers = {
             }
         },
 
-        Mutations:{
+        Mutation:{
             createCita: async ( _, {citaData}, {dataSources}) => {
                 return await dataSources.citaAPI.CreateCita(citaData);
             }

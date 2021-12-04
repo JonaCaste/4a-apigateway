@@ -20,13 +20,13 @@ const citasTypeDefs = gql`
     }
 
     type Query{
-        CitasById(id: Int!): Citas
+        citaById(id: Int!): Cita
         # por el momento no se utiliza
         Citas: [Cita]
     }
 
     type Mutation{
-        CreateCita(data: CitaInput!): Cita
+        createCita(data: CitaInput!): Cita
     }
 
 `;
