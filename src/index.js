@@ -5,10 +5,10 @@ const resolvers = require('./resolvers');
 const ClienteAPI = require('./dataSources/clienteApi');
 const ProfesionalAPI = require('./dataSources/profesionalApi');
 const CitaAPI = require("./dataSources/citaApi");
-// const authentication = require("./utils/authentication");
+const authentication = require("./utils/authentication");
 
 const server = new ApolloServer({
-    // context: authentication,
+    context: authentication,
     typeDefs,
     resolvers,
     dataSources: () => ({

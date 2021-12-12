@@ -13,12 +13,20 @@ class ProfesionalApi extends RESTDataSource{
     /*   Microservico Django   */
 
         /* Profesional */
-            async ProfesionalByIdRequest(id){
-                return await this.get(`/profesional/persona-profesional/${id}/`);
+            async ProfesionalById(id){
+                return await this.get(`/profesional/user/${id}/`);
+            }
+
+            async Profesionales(){
+                return await this.get(`/profesional/user-list/`);
+            }
+
+            async LoginProfesional(userProfesionalData){
+                return await this.post("/rest-auth/login/", userProfesionalData);
             }
 
             async CreateProfesional(profesionalData){
-                return await this.post("/profesional/persona-profesional/", profesionalData)
+                return await this.post("/profesional/create-profesional/", profesionalData);
             }
         /*    */
         

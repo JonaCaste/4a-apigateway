@@ -13,8 +13,12 @@ class ClienteApi extends RESTDataSource{
     /*   Microservico Django   */
 
         /* Cliente */
-            async ClienteByIdRequest(id){
+            async ClienteById(id){
                 return await this.get(`/cliente/persona-cliente/${id}/`);
+            }
+
+            async Clientes(){
+                return await this.get(`/cliente/persona-cliente/`);
             }
 
             async CreateCliente(clienteData){

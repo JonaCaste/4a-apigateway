@@ -3,10 +3,17 @@ const {gql} = require("apollo-server");
 const profesionalTypeDefs = gql`
 
     # Microservicio DJANGO
-    input ProfesionalInput{
+
+    input ProfesionalLogin{
+        username: String!
+        password: String!
+    }
+
+    input ProfesionalSignup{
+        username: String!
+        password: String!
         tipoDocumento: String!
         numeroDocumento: Int!
-        nombre: String!
         perfil: String
     }
 
@@ -14,18 +21,29 @@ const profesionalTypeDefs = gql`
         id: Int
         tipoDocumento: String
         numeroDocumento: Int
-        nombre: String
         perfil: String
+        user: Int
+    }
+
+    type UserProfesional{
+        id: Int
+        username: String
+        email: String
+        profesional: Profesional
+    }
+
+    type Token{
+        key: String!
     }
 
     type Query{
-        profesionalById(id: Int!): Profesional
-        # por el momento no se utiliza
-        Profesionales: [Profesional]
+        profesionalById(id: Int!): UserProfesional
+        profesionales: [UserProfesional]
     }
 
     type Mutation{
-        createProfesional(data: ProfesionalInput!): Profesional
+        createProfesional(profesionalData: ProfesionalSignup!): Token!
+        loginProfesional(profesionalLogin: ProfesionalLogin!): Token!
     }
 
 `;

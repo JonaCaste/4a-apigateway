@@ -2,8 +2,8 @@ const citaResolvers = {
 
     /* Microservicio Spring */
         Query:{
-            citaById: async ( _, {id}, {dataSources}) => {
-                return await dataSources.citaAPI.citaByIdRequest(id);
+            citaByProfesional: async ( _, {profesionalId}, {dataSources}) => {
+                return await dataSources.citaAPI.CitaByProfesional(profesionalId);
             }
         },
 

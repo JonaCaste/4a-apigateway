@@ -13,12 +13,12 @@ class CitaApi extends RESTDataSource{
     /*   Microservico Spring   */
 
         /* Cliente */
-            async CitaByIdRequest(id){
-                return await this.get(`/citasUsuario/${id}`);
+            async CitaByProfesional(profesionalId){
+                return await this.get(`/citas/${profesionalId}`);
             }
 
             async CreateCita(citaData){
-                return await this.post("/citas/", citaData)
+                return await this.post("/cita", citaData);
             }
         /*    */
 
